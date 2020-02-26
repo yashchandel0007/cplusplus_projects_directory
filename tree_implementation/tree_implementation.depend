@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1582713142 source:d:\cplusplus_projects_directory\tree_implementation\main.cpp
+	<iostream>
+	<cstdlib>
+
