@@ -23,9 +23,25 @@ BTNode* newNode(int x){    //because it returns the address of the new Node crea
     return newNode;
 }
 
+void preorder_convention(BTNode *root){
+    if(root){
+        cout<<root->data<<"->";
+        preorder_convention(root->left);
+        preorder_convention(root->right);
+    }
+}
+
+void preorder_converse(BTNode *root){
+    if(root){
+        cout<<root->data<<"->";
+        preorder_convention(root->right);
+        preorder_convention(root->left);
+    }
+}
+
 int main()
 {
-    //cout << "Hello world!" << endl;
+    cout << "Tree implementation";
     BTNode *root;
     root = newNode(2);
     root->left = newNode(3);
@@ -34,7 +50,10 @@ int main()
     root->right->left = newNode(6);
     root->left->right->left = newNode(7);
     root->right->left->right = newNode(8);
-
+    cout<<endl;
+    preorder_convention(root);
+    cout<<endl;
+    preorder_converse(root);
     return 0;
 
 }
