@@ -70,6 +70,29 @@ void inorder_converse(BTNode *root){
     }
 }
 
+int count = 0; //to replace the right most node with the zero
+int sum = 0;
+void sum_of_right_elements(BTNode *root){
+    if(root)
+    {
+        BTNode* temp;
+        temp = root;
+        sum_of_right_elements(temp->right);
+        //update the root value here
+        if(count==0){
+            sum+=root->data;
+            root->data = 0;
+            count++;
+        }
+        else{
+            int temp_data = root->data;
+            root->data=sum;
+            sum+=temp_data;
+        }
+        sum_of_right_elements(temp->left);
+    }
+}
+
 int main()
 {
     cout << "Tree implementation";
@@ -95,6 +118,13 @@ int main()
     inorder_converse(root);
     cout<<endl<<"Postorder Converse"<<endl;
     postorder_converse(root);
+
+    sum_of_right_elements(root);
+    count = 0; //resets the count variable
+    sum = 0; //resets the sum
+    cout<<endl<<"Inorder Convention after sum_of_right_elements()"<<endl;
+    inorder_convention(root);
+
     return 0;
 
 }
