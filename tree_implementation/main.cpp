@@ -121,6 +121,7 @@ int main()
 
     sum_of_right_elements(root);
     count = 0; //resets the count variable
+    sum = 0; //resets the sum
     cout<<endl<<"Inorder Convention after sum_of_right_elements()"<<endl;
     inorder_convention(root);
 
