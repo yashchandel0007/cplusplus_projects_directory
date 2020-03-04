@@ -72,6 +72,7 @@ void inorder_converse(BTNode *root){
 
 int count = 0; //to replace the right most node with the zero
 int sum = 0;
+
 void sum_of_right_elements(BTNode *root){
     if(root)
     {
