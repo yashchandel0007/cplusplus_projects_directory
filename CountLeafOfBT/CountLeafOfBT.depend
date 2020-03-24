@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1583313098 source:d:\cplusplus_projects_directory\countleafofbt\main.cpp
+	<iostream>
+	<cstdlib>
+
