@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1583313793 source:d:\cplusplus_projects_directory\countinternalnodesinbt\main.cpp
+	<iostream>
+	<cstdlib>
+
